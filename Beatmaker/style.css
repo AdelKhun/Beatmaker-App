@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Goldman", cursive;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+h1 {
+  color: white;
+}
+i,
+svg {
+  pointer-events: none;
+}
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+.kick-pad {
+  background-color: rgb(65, 61, 61);
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.438);
+}
+.kick-pad.active {
+  background-color: rgb(17, 124, 173);
+}
+.snare-pad {
+  background-color: rgb(65, 61, 61);
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.438);
+}
+.snare-pad.active {
+  background-color: rgb(156, 58, 62);
+}
+.hihat-pad {
+  background-color: rgb(65, 61, 61);
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.438);
+}
+.hihat-pad.active {
+  background-color: rgb(59, 153, 67);
+}
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0rem 2rem;
+}
+.controls button {
+  padding: 1rem;
+  border: none;
+  background-color: rgb(65, 61, 61);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.438);
+}
+.mute.active {
+  background-color: rgb(117, 110, 110);
+}
+.pad {
+  transition: all 0.5s ease;
+}
+.play {
+  border-radius: 5px;
+  font-family: "Goldman", cursive;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background-color: rgb(65, 61, 61);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.438);
+}
+.play:hover {
+  background-color: rgb(76, 71, 71);
+}
+select {
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  background-color: rgb(65, 61, 61);
+  color: white;
+  border: none;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.438);
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  background-color: rgb(65, 61, 61);
+  cursor: pointer;
+  border-radius: 1rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.438);
+}
+.tempo p {
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-align: center;
+  color: white;
+}
+
+/* Input Thumb */
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+}
